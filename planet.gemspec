@@ -8,7 +8,7 @@ spec = Gem::Specification.new do |s|
   s.homepage = 'http://poteland.com'
   s.platform = Gem::Platform::RUBY
   s.summary = 'An awesome rss/atom feed aggregator designed to work with Octopress/Jekyll'
-  s.files = Dir['bin/*'] + Dir['lib/**/*.rb']
+  s.files = Dir['bin/*'] + Dir['lib/**/*.rb'] + Dir['lib/planet/www/views/**/*.haml']
   s.require_paths << 'lib'
   s.has_rdoc = false
   s.bindir = 'bin'
@@ -18,4 +18,5 @@ spec = Gem::Specification.new do |s|
   s.add_runtime_dependency('feedzirra')
   s.add_runtime_dependency('mustache')
   s.add_runtime_dependency('sinatra')
+  s.add_runtime_dependency('haml')
 end
