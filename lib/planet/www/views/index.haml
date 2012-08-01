@@ -1,1 +1,11 @@
-"Hello World!"
+%fieldset
+  %legend
+    blogs
+  - @conf["blogs"].each_with_index do |blog, index|
+    - unless index == 0
+      %hr
+    - blog.each_pair do |k, v|
+      %p
+        %label
+          =k
+          %input{:value => v}
