@@ -116,6 +116,15 @@ command :update_templates do |c|
   end
 end
 
+desc 'Run local server for configuration GUI'
+command :runserver do |c|
+  c.action do |global_options,options,args|
+    #conf = YAML.load_file('planet.yml')
+    require 'planet/www/app.rb'
+    PlanetWeb.run!
+  end
+end
+
 pre do |global,command,options,args|
   if command.name == :generate
     conf = YAML.load_file('planet.yml')
