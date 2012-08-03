@@ -1,5 +1,6 @@
 require 'planet/version'
 require 'planet/blog'
+require 'planet/web'
 
 class Planet
 
