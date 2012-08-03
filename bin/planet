@@ -119,7 +119,6 @@ end
 desc 'Run local server for configuration GUI'
 command :runserver do |c|
   c.action do |global_options,options,args|
-    #conf = YAML.load_file('planet.yml')
     Planet::Web.run!
   end
 end

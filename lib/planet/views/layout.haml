@@ -4,4 +4,6 @@
     %meta(charset="utf-8")
     %title= @title || "Planet GUI"
   %body
-    = yield
+    %h1= @title || "Planet GUI"
+    =haml :tabs
+    =yield
